@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NcHwGNAmmQQ=",
+  "dgSpecHash": "ER+CWrXp4cE=",
   "success": true,
   "projectFilePath": "C:\\Users\\manue\\source\\repos\\GestorTareas\\GestorTareas\\GestorTareas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\manue\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

@@ -8,7 +8,7 @@
     Title="GestorTareas">
 
     <ShellContent
-        Title="Home"
+        Title="Gestión de Tareas"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestorTareas.ViewModels"
+             xmlns:models="clr-namespace:GestorTareas.Models"
+             x:Class="GestorTareas.Views.TareaView"
+             x:DataType="vm:TareaViewModel">
+
+    <ContentPage.BindingContext>
+        <vm:TareaViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Formulario de nueva tarea -->
+            <Entry Placeholder="Título" Text="{Binding NuevaTarea.Titulo}" />
+            <Editor Placeholder="Descripción" Text="{Binding NuevaTarea.Descripcion}" AutoSize="TextChanges" />
+            <DatePicker Date="{Binding NuevaTarea.FechaVencimiento}" />
+            <Entry Placeholder="Estado" Text="{Binding NuevaTarea.Estado}" />
+            <!-- ✅ Aquí se usa la propiedad auxiliar UsuarioIdTexto -->
+            <Entry Placeholder="Usuario ID" Keyboard="Numeric" Text="{Binding UsuarioIdTexto}" />
+
+            <Button Text="Agregar tarea" Command="{Binding AgregarTareaCommand}" />
+
+            <!-- Tabla de tareas -->
+            <CollectionView ItemsSource="{Binding ListaTareas}">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="*,2*,2*,*,*">
+                        <Label Text="TareaId" />
+                        <Label Text="Título" />
+                        <Label Text="Descripción" />
+                        <Label Text="Fecha" />
+                        <Label Text="Estado" />
+                    </Grid>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:TareaModel">
+                        <Grid ColumnDefinitions="*,2*,2*,*,*">
+                            <Label Text="{Binding TareaId}" />
+                            <Label Text="{Binding Titulo}" />
+                            <Label Text="{Binding Descripcion}" />
+                            <Label Text="{Binding FechaVencimiento, StringFormat='{0:dd/MM/yyyy}'}" />
+                            <Label Text="{Binding Estado}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,41 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewmodel="clr-namespace:GestorTareas.ViewModels"
-             x:Class="GestorTareas.MainPage">
+             xmlns:vm="clr-namespace:GestorTareas.ViewModels"
+             xmlns:models="clr-namespace:GestorTareas.Models"
+             x:Class="GestorTareas.MainPage"
+             x:DataType="vm:TareaViewModel"
+             BackgroundColor="#F4F4F4">
 
     <ContentPage.BindingContext>
-        <viewmodel:MainViewModel/>
+        <vm:TareaViewModel />
     </ContentPage.BindingContext>
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <!-- Formulario de nueva tarea con etiquetas arriba -->
+            <Frame CornerRadius="10" BackgroundColor="White" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
 
-            <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                    <Label Text="Nueva Tarea" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="{Binding Count}" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="{Binding SumarCommand}"
-                HorizontalOptions="Fill" />
+                    <Label Text="Título" FontAttributes="Bold" />
+                    <Entry Placeholder="Ingrese el título" Text="{Binding NuevaTarea.Titulo}" />
+
+                    <Label Text="Descripción" FontAttributes="Bold" />
+                    <Editor Placeholder="Ingrese descripción" Text="{Binding NuevaTarea.Descripcion}" AutoSize="TextChanges" HeightRequest="70" />
+
+                    <Label Text="Fecha de vencimiento" FontAttributes="Bold" />
+                    <DatePicker Date="{Binding NuevaTarea.FechaVencimiento}" 
+                                Format="dddd, dd MMMM yyyy"
+                                TextColor="#333" />
+
+                    <Label Text="Estado" FontAttributes="Bold" />
+                    <Entry Placeholder="Estado de la tarea" Text="{Binding NuevaTarea.Estado}" />
+
+                    <Label Text="Usuario ID" FontAttributes="Bold" />
+                    <Entry Placeholder="ID usuario" Keyboard="Numeric" Text="{Binding UsuarioIdTexto}" />
+
+                    <!-- Botón Agregar alineado a la derecha y más pequeño -->
+                    <HorizontalStackLayout HorizontalOptions="End">
+                        <Button Text="Agregar tarea"
+                                Command="{Binding AgregarTareaCommand}"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                CornerRadius="8"
+                                Padding="10,5"
+                                WidthRequest="140" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Tabla de tareas con acciones -->
+            <Label Text="Lista de Tareas" FontSize="20" FontAttributes="Bold" />
+
+            <CollectionView ItemsSource="{Binding ListaTareas}">
+                <CollectionView.Header>
+                    <Grid ColumnDefinitions="1*, 2*, 3*, 2*, 1.5*, 1.5*" BackgroundColor="#DADADA" Padding="10">
+                        <Label Text="ID" FontAttributes="Bold" Grid.Column="0" />
+                        <Label Text="Título" FontAttributes="Bold" Grid.Column="1" />
+                        <Label Text="Descripción" FontAttributes="Bold" Grid.Column="2" />
+                        <Label Text="Fecha" FontAttributes="Bold" Grid.Column="3" />
+                        <Label Text="Estado" FontAttributes="Bold" Grid.Column="4" />
+                        <Label Text="Acciones" FontAttributes="Bold" HorizontalOptions="Center" Grid.Column="5" />
+                    </Grid>
+                </CollectionView.Header>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:TareaModel">
+                        <Frame Padding="10" Margin="0,0,0,1" BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0">
+                            <Grid ColumnDefinitions="1*, 2*, 3*, 2*, 1.5*, 1.5*">
+                                <Label Text="{Binding TareaId}" VerticalOptions="Center" Grid.Column="0" />
+                                <Label Text="{Binding Titulo}" VerticalOptions="Center" Grid.Column="1" />
+                                <Label Text="{Binding Descripcion}" VerticalOptions="Center" LineBreakMode="TailTruncation" MaxLines="1" Grid.Column="2" />
+                                <Label Text="{Binding FechaVencimiento, StringFormat='{0:dddd, dd MMM yyyy}'}" VerticalOptions="Center" Grid.Column="3" TextColor="#555" FontAttributes="Italic" />
+                                <Label Text="{Binding Estado}" VerticalOptions="Center" Grid.Column="4" />
+
+                                <!-- Botones de acción con iconos simples -->
+                                <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="5">
+                                    <Button
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EditarTareaCommand}"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#2196F3"
+                                        TextColor="White"
+                                        WidthRequest="36"
+                                        HeightRequest="36"
+                                        CornerRadius="18"
+                                        FontSize="18"
+                                        Text="✏" />
+                                    <Button
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EliminarTareaCommand}"
+                                        CommandParameter="{Binding .}"
+                                        BackgroundColor="#F44336"
+                                        TextColor="White"
+                                        WidthRequest="36"
+                                        HeightRequest="36"
+                                        CornerRadius="18"
+                                        FontSize="18"
+                                        Text="×" />
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

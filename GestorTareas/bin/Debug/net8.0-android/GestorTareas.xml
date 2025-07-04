@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GestorTareas</name>
+    </assembly>
+    <members>
+        <member name="T:GestorTareas.Models.TareaModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.TareaId">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.tareaId"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.Titulo">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.titulo"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.Descripcion">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.descripcion"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.FechaCreacion">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.fechaCreacion"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.FechaVencimiento">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.fechaVencimiento"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.Estado">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.estado"/>
+        </member>
+        <member name="P:GestorTareas.Models.TareaModel.UsuarioId">
+            <inheritdoc cref="F:GestorTareas.Models.TareaModel.usuarioId"/>
+        </member>
+        <member name="T:GestorTareas.ViewModels.TareaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:GestorTareas.ViewModels.TareaViewModel.NuevaTarea">
+            <inheritdoc cref="F:GestorTareas.ViewModels.TareaViewModel.nuevaTarea"/>
+        </member>
+        <member name="P:GestorTareas.ViewModels.TareaViewModel.UsuarioIdTexto">
+            <inheritdoc cref="F:GestorTareas.ViewModels.TareaViewModel.usuarioIdTexto"/>
+        </member>
+        <member name="F:GestorTareas.ViewModels.TareaViewModel.agregarTareaCommand">
+            <summary>The backing field for <see cref="P:GestorTareas.ViewModels.TareaViewModel.AgregarTareaCommand"/>.</summary>
+        </member>
+        <member name="P:GestorTareas.ViewModels.TareaViewModel.AgregarTareaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:GestorTareas.ViewModels.TareaViewModel.AgregarTarea"/>.</summary>
+        </member>
+        <member name="F:GestorTareas.ViewModels.TareaViewModel.eliminarTareaCommand">
+            <summary>The backing field for <see cref="P:GestorTareas.ViewModels.TareaViewModel.EliminarTareaCommand"/>.</summary>
+        </member>
+        <member name="P:GestorTareas.ViewModels.TareaViewModel.EliminarTareaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:GestorTareas.ViewModels.TareaViewModel.EliminarTarea(GestorTareas.Models.TareaModel)"/>.</summary>
+        </member>
+        <member name="F:GestorTareas.ViewModels.TareaViewModel.editarTareaCommand">
+            <summary>The backing field for <see cref="P:GestorTareas.ViewModels.TareaViewModel.EditarTareaCommand"/>.</summary>
+        </member>
+        <member name="P:GestorTareas.ViewModels.TareaViewModel.EditarTareaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:GestorTareas.ViewModels.TareaViewModel.EditarTarea(GestorTareas.Models.TareaModel)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TareaId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TareaId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Titulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Titulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Descripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Descripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FechaCreacion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FechaCreacion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FechaVencimiento">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FechaVencimiento" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Estado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Estado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UsuarioId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UsuarioId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.NuevaTarea">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "NuevaTarea" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UsuarioIdTexto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UsuarioIdTexto" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TareaId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TareaId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Titulo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Titulo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Descripcion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Descripcion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FechaCreacion">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FechaCreacion" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FechaVencimiento">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FechaVencimiento" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Estado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Estado" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UsuarioId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UsuarioId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.NuevaTarea">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "NuevaTarea" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UsuarioIdTexto">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UsuarioIdTexto" generated properties.</summary>
+        </member>
+    </members>
+</doc>

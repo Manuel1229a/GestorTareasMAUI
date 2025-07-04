@@ -1,26 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\",
+  "WorkspaceRootPath": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\vanessa\\documentos\\gestortareasmaui\\gestortareas\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\vanessa\\documentos\\gestortareasmaui\\gestortareas\\views\\tareaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\views\\tareaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\vanessa\\documentos\\gestortareasmaui\\gestortareas\\models\\tareamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\models\\tareamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\vanessa\\documentos\\gestortareasmaui\\gestortareas\\viewmodels\\tareaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\viewmodels\\tareaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\viewmodels\\tareaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\vanessa\\documentos\\gestortareasmaui\\gestortareas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\models\\tareamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\models\\tareamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|c:\\users\\manue\\source\\repos\\gestortareasmaui\\gestortareas\\views\\tareaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84974DAA-B0F0-4212-AD78-5ED26AC81953}|GestorTareas\\GestorTareas.csproj|solutionrelative:gestortareas\\views\\tareaview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,8 +38,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -62,65 +74,86 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\AppShell.xaml",
+              "RelativeDocumentMoniker": "GestorTareas\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\AppShell.xaml",
+              "RelativeToolTip": "GestorTareas\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T03:32:11.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\App.xaml",
+              "RelativeDocumentMoniker": "GestorTareas\\App.xaml",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\App.xaml",
+              "RelativeToolTip": "GestorTareas\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T03:32:03.255Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\MainPage.xaml",
               "RelativeDocumentMoniker": "GestorTareas\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\MainPage.xaml",
-              "RelativeToolTip": "GestorTareas\\MainPage.xaml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAqwFkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\MainPage.xaml*",
+              "RelativeToolTip": "GestorTareas\\MainPage.xaml*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAhwCUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-07-04T02:16:29.11Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "TareaView.xaml",
-              "DocumentMoniker": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\Views\\TareaView.xaml",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\Views\\TareaView.xaml",
               "RelativeDocumentMoniker": "GestorTareas\\Views\\TareaView.xaml",
-              "ToolTip": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\Views\\TareaView.xaml*",
-              "RelativeToolTip": "GestorTareas\\Views\\TareaView.xaml*",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDMAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\Views\\TareaView.xaml",
+              "RelativeToolTip": "GestorTareas\\Views\\TareaView.xaml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-03T23:31:13.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T23:31:13.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TareaModel.cs",
-              "DocumentMoniker": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\Models\\TareaModel.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\Models\\TareaModel.cs",
               "RelativeDocumentMoniker": "GestorTareas\\Models\\TareaModel.cs",
-              "ToolTip": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\Models\\TareaModel.cs",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\Models\\TareaModel.cs",
               "RelativeToolTip": "GestorTareas\\Models\\TareaModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T22:42:04.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TareaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\ViewModels\\TareaViewModel.cs",
-              "RelativeDocumentMoniker": "GestorTareas\\ViewModels\\TareaViewModel.cs",
-              "ToolTip": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\ViewModels\\TareaViewModel.cs",
-              "RelativeToolTip": "GestorTareas\\ViewModels\\TareaViewModel.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAwwGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T22:44:26.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-03T22:42:04.726Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "TareaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\ViewModels\\TareaViewModel.cs",
+              "RelativeDocumentMoniker": "GestorTareas\\ViewModels\\TareaViewModel.cs",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\ViewModels\\TareaViewModel.cs",
+              "RelativeToolTip": "GestorTareas\\ViewModels\\TareaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T22:44:26.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\MauiProgram.cs",
               "RelativeDocumentMoniker": "GestorTareas\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\VANESSA\\Documentos\\GestorTareasMAUI\\GestorTareas\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\manue\\source\\repos\\GestorTareasMAUI\\GestorTareas\\MauiProgram.cs",
               "RelativeToolTip": "GestorTareas\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-03T04:59:57.773Z"
             }

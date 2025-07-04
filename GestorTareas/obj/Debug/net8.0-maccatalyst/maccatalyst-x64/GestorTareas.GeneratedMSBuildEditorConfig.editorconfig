@@ -17,43 +17,43 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GestorTareas
-build_property.ProjectDir = C:\Users\VANESSA\Documentos\GestorTareasMAUI\GestorTareas\
+build_property.ProjectDir = C:\Users\manue\Source\Repos\GestorTareasMAUI\GestorTareas\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/App.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/AppShell.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/MainPage.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/Resources/Styles/Colors.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/Resources/Styles/Styles.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/VANESSA/Documentos/GestorTareasMAUI/GestorTareas/Views/TareaView.xaml]
+[C:/Users/manue/Source/Repos/GestorTareasMAUI/GestorTareas/Views/TareaView.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = GestorTareas.Views.TareaView.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\TareaView.xaml

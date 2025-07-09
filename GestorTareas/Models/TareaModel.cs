@@ -7,28 +7,25 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace GestorTareas.Models
 {
-    public partial class TareaModel : ObservableObject
+    public partial class TareaModel 
     {
-        [ObservableProperty]
-        private int tareaId;
+       
+        public int TareaId { get; set; }
 
-        [ObservableProperty]
-        private string titulo;
+       
+        public string Titulo { get; set;}
 
-        [ObservableProperty]
-        private string descripcion;
+       
+        public string Descripcion { get; set; }
 
-        [ObservableProperty]
-        private DateTime fechaCreacion;
+        
+        public DateTime FechaVencimiento { get; set; }
 
-        [ObservableProperty]
-        private DateTime fechaVencimiento;
+       
+        public string Estado { get; set; }
 
-        [ObservableProperty]
-        private string estado;
-
-        [ObservableProperty]
-        private int usuarioId;
+       
+        public int UsuarioId { get; set; }
 
 
     }

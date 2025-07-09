@@ -1,99 +1,85 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using GestorTareas.Models;
+using GestorTareas.Services;
+using System;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace GestorTareas.ViewModels
 {
-    public partial class TareaViewModel : ObservableObject
+    public class TareaViewModel : ObservableObject
     {
-        public ObservableCollection<TareaModel> ListaTareas { get; set; } = new();
+        private string _usuarioIdTexto;
 
-        [ObservableProperty]
-        private TareaModel nuevaTarea = new TareaModel
+        public string UsuarioIdTexto
         {
-            FechaCreacion = DateTime.Now,
-            FechaVencimiento = DateTime.Now.AddDays(1),
-            Estado = "Pendiente"
-        };
-
-        [ObservableProperty]
-        private string usuarioIdTexto;
-
-        private TareaModel tareaEnEdicion = null;
-
-        [RelayCommand]
-        public void AgregarTarea()
-        {
-            int.TryParse(UsuarioIdTexto, out int usuarioIdConvertido);
-
-            if (tareaEnEdicion == null)
+            get => _usuarioIdTexto;
+            set
             {
-                // Crear nueva tarea
-                var tarea = new TareaModel
+                if (_usuarioIdTexto != value)
                 {
-                    TareaId = ListaTareas.Count + 1,
-                    Titulo = NuevaTarea.Titulo,
-                    Descripcion = NuevaTarea.Descripcion,
-                    FechaCreacion = DateTime.Now,
-                    FechaVencimiento = NuevaTarea.FechaVencimiento,
-                    Estado = NuevaTarea.Estado,
-                    UsuarioId = usuarioIdConvertido
-                };
+                    _usuarioIdTexto = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        private readonly TareaService _tareaService;
+
+        public ObservableCollection<TareaModel> ListaTareas { get; set; } = new();
+        public TareaModel NuevaTarea { get; set; } = new();
+
+        public TareaViewModel()
+        {
+            _tareaService = new TareaService();
+            _ = CargarTareasAsync();
+        }
+
+        public async Task CargarTareasAsync()
+        {
+            var tareas = await _tareaService.ObtenerTareasAsync();
+            ListaTareas.Clear();
+            foreach (var tarea in tareas)
+            {
                 ListaTareas.Add(tarea);
             }
-            else
+        }
+
+        public Command AgregarTareaCommand => new(async () =>
+        {
+            var exito = await _tareaService.AgregarTareaAsync(NuevaTarea);
+            if (exito)
             {
-                // Editar tarea existente
-                tareaEnEdicion.Titulo = NuevaTarea.Titulo;
-                tareaEnEdicion.Descripcion = NuevaTarea.Descripcion;
-                tareaEnEdicion.FechaVencimiento = NuevaTarea.FechaVencimiento;
-                tareaEnEdicion.Estado = NuevaTarea.Estado;
-                tareaEnEdicion.UsuarioId = usuarioIdConvertido;
-                tareaEnEdicion = null;
+                await CargarTareasAsync();
+                NuevaTarea = new TareaModel();
+                OnPropertyChanged(nameof(NuevaTarea));
             }
+        });
 
-            ReiniciarFormulario();
-        }
-
-        [RelayCommand]
-        public void EliminarTarea(TareaModel tarea)
+        public Command<TareaModel> EliminarTareaCommand => new(async (tarea) =>
         {
-            if (ListaTareas.Contains(tarea))
+            var exito = await _tareaService.EliminarTareaAsync(tarea.TareaId);
+            if (exito)
             {
-                ListaTareas.Remove(tarea);
+                await CargarTareasAsync();
             }
-        }
+        });
 
-        [RelayCommand]
-        public void EditarTarea(TareaModel tarea)
+        public Command<TareaModel> EditarTareaCommand => new(async (tarea) =>
         {
-            NuevaTarea = new TareaModel
+            var exito = await _tareaService.ActualizarTareaAsync(tarea);
+            if (exito)
             {
-                TareaId = tarea.TareaId,
-                Titulo = tarea.Titulo,
-                Descripcion = tarea.Descripcion,
-                FechaCreacion = tarea.FechaCreacion,
-                FechaVencimiento = tarea.FechaVencimiento,
-                Estado = tarea.Estado,
-                UsuarioId = tarea.UsuarioId
-            };
-
-            UsuarioIdTexto = tarea.UsuarioId.ToString();
-            tareaEnEdicion = tarea;
-        }
-
-        private void ReiniciarFormulario()
-        {
-            NuevaTarea = new TareaModel
-            {
-                FechaCreacion = DateTime.Now,
-                FechaVencimiento = DateTime.Now.AddDays(1),
-                Estado = "Pendiente"
-            };
-            UsuarioIdTexto = string.Empty;
-        }
+                await CargarTareasAsync();
+            }
+        });
     }
 }

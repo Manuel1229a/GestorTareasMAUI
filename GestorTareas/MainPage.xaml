@@ -11,142 +11,161 @@
         <vm:TareaViewModel />
     </ContentPage.BindingContext>
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="30">
+    <Grid>
 
-            <!-- Encabezado principal -->
-            <Label Text="Gestor de Tareas"
-                   FontSize="28"
-                   FontAttributes="Bold"
-                   TextColor="#111827"
-                   HorizontalOptions="Center" />
+        <!-- Lista de tareas con encabezado -->
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="30">
+                <Label Text="Gestor de Tareas"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="#111827"
+                       HorizontalOptions="Center" />
 
-            <!-- Formulario de nueva tarea -->
-            <Frame CornerRadius="12"
-                   BackgroundColor="White"
+                <Label Text="Tareas Registradas"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="#1F2937" />
+
+                <CollectionView ItemsSource="{Binding ListaTareas}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:TareaModel">
+                            <Frame Padding="15"
+                                   Margin="0,0,0,10"
+                                   BackgroundColor="White"
+                                   BorderColor="#E5E7EB"
+                                   CornerRadius="10"
+                                   HasShadow="True">
+                                <VerticalStackLayout Spacing="5">
+
+                                    <Label Text="{Binding Titulo}"
+                                           FontAttributes="Bold"
+                                           FontSize="18"
+                                           TextColor="#111827" />
+
+                                    <Label Text="{Binding Descripcion}"
+                                           FontSize="14"
+                                           TextColor="#6B7280"
+                                           LineBreakMode="TailTruncation"
+                                           MaxLines="2" />
+
+                                    <Label Text="{Binding FechaVencimiento, StringFormat='Fecha límite: {0:dddd, dd MMM yyyy}'}"
+                                           FontSize="13"
+                                           TextColor="#9CA3AF" />
+
+                                    <Label Text="{Binding Estado}"
+                                           FontSize="13"
+                                           FontAttributes="Italic"
+                                           TextColor="#4B5563" />
+
+                                    <HorizontalStackLayout Spacing="10" HorizontalOptions="End">
+                                        <Button Text="✏"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EditarTareaCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#60A5FA"
+                                                TextColor="White"
+                                                WidthRequest="40"
+                                                HeightRequest="40"
+                                                CornerRadius="20"
+                                                FontSize="18" />
+                                        <Button Text="🗑"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EliminarTareaCommand}"
+                                                CommandParameter="{Binding .}"
+                                                BackgroundColor="#EF4444"
+                                                TextColor="White"
+                                                WidthRequest="40"
+                                                HeightRequest="40"
+                                                CornerRadius="20"
+                                                FontSize="18" />
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Botón flotante -->
+        <Button x:Name="btnAgregar"
+                Text="+"
+                WidthRequest="60"
+                HeightRequest="60"
+                CornerRadius="30"
+                FontSize="32"
+                BackgroundColor="#3B82F6"
+                TextColor="White"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Margin="20"
+                Clicked="OnMostrarFormularioClicked"/>
+
+        <!-- Panel flotante de formulario -->
+        <Grid x:Name="FormularioTarea"
+              IsVisible="False"
+              BackgroundColor="#00000066"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+            <Frame BackgroundColor="White"
+                   CornerRadius="12"
                    Padding="20"
-                   HasShadow="True"
-                   BorderColor="#E5E7EB">
-
+                   Margin="30"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   WidthRequest="340"
+                   HasShadow="True">
                 <VerticalStackLayout Spacing="15">
+
                     <Label Text="Crear Nueva Tarea" FontSize="20" FontAttributes="Bold" TextColor="#1F2937" />
 
-                    <Frame Padding="0" CornerRadius="8" HasShadow="False" BorderColor="#E5E7EB">
-                        <Entry Placeholder="Título"
+                    <Entry Placeholder="Título"
                            Text="{Binding NuevaTarea.Titulo}"
                            BackgroundColor="#F3F4F6"
-                           HeightRequest="44"
-                           />
-                    </Frame>
+                           TextColor="Black"
+                           HeightRequest="44" />
 
-                    <Frame Padding="0" CornerRadius="8" HasShadow="False" BorderColor="#E5E7EB">
-                        <Editor Placeholder="Descripción"
+                    <Editor Placeholder="Descripción"
                             Text="{Binding NuevaTarea.Descripcion}"
                             AutoSize="TextChanges"
+                            TextColor="Black"
                             HeightRequest="80"
-                            BackgroundColor="#F3F4F6"
-                             />
-                    </Frame>
+                            BackgroundColor="#F3F4F6" />
 
-                    <Frame Padding="0" CornerRadius="8" HasShadow="False" BorderColor="#E5E7EB">
-                        <DatePicker Date="{Binding NuevaTarea.FechaVencimiento}"
+                    <DatePicker Date="{Binding NuevaTarea.FechaVencimiento}"
                                 Format="dddd, dd MMMM yyyy"
-                                TextColor="#374151"
+                                TextColor="Black"
                                 BackgroundColor="#F3F4F6"
-                                HeightRequest="44"
-                                 />
-                    </Frame>
+                                HeightRequest="44" />
 
-                    <Frame Padding="0" CornerRadius="8" HasShadow="False" BorderColor="#E5E7EB">
-                        <Entry Placeholder="Estado"
+                    <Entry Placeholder="Estado"
                            Text="{Binding NuevaTarea.Estado}"
                            BackgroundColor="#F3F4F6"
-                           HeightRequest="44"
+                           TextColor="Black"
+                           HeightRequest="44" />
+
+                    <Label Text="Asignar Usuario" FontAttributes="Bold" TextColor="Black"/>
+                    <Picker ItemsSource="{Binding ListaUsuarios}"
+                            ItemDisplayBinding="{Binding Nombre}"
+                            SelectedItem="{Binding UsuarioSeleccionado}"
+                            TextColor="Black"
+                            Background="#F3F4F6"
                             />
-                    </Frame>
 
-                    <Frame Padding="0" CornerRadius="8" HasShadow="False" BorderColor="#E5E7EB">
-                        <Entry Placeholder="ID de Usuario"
-                           Keyboard="Numeric"
-                           Text="{Binding UsuarioIdTexto}"
-                           BackgroundColor="#F3F4F6"
-                           HeightRequest="44"
-                           />
-                    </Frame>
+                    <HorizontalStackLayout HorizontalOptions="End" Spacing="10">
+                        <Button Text="Cancelar"
+                                BackgroundColor="#E5E7EB"
+                                TextColor="Black"
+                                Clicked="OnCerrarFormularioClicked" />
 
-                    <Button Text="Agregar tarea"
-                            Command="{Binding AgregarTareaCommand}"
-                            BackgroundColor="#3B82F6"
-                            TextColor="White"
-                            FontAttributes="Bold"
-                            CornerRadius="8"
-                            HeightRequest="44" />
+                        <Button Text="Agregar"
+                                Command="{Binding AgregarTareaCommand}"
+                                BackgroundColor="#3B82F6"
+                                TextColor="White"
+                                Clicked="OnAgregarYCerrar"/>
+                    </HorizontalStackLayout>
+
                 </VerticalStackLayout>
             </Frame>
-
-            <!-- Lista de tareas -->
-            <Label Text="Tareas Registradas"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   TextColor="#1F2937" />
-
-            <CollectionView ItemsSource="{Binding ListaTareas}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:TareaModel">
-                        <Frame Padding="15"
-                               Margin="0,0,0,10"
-                               BackgroundColor="White"
-                               BorderColor="#E5E7EB"
-                               CornerRadius="10"
-                               HasShadow="True">
-                            <VerticalStackLayout Spacing="5">
-
-                                <Label Text="{Binding Titulo}"
-                                       FontAttributes="Bold"
-                                       FontSize="18"
-                                       TextColor="#111827" />
-
-                                <Label Text="{Binding Descripcion}"
-                                       FontSize="14"
-                                       TextColor="#6B7280"
-                                       LineBreakMode="TailTruncation"
-                                       MaxLines="2" />
-
-                                <Label Text="{Binding FechaVencimiento, StringFormat='Fecha límite: {0:dddd, dd MMM yyyy}'}"
-                                       FontSize="13"
-                                       TextColor="#9CA3AF" />
-
-                                <Label Text="{Binding Estado}"
-                                       FontSize="13"
-                                       FontAttributes="Italic"
-                                       TextColor="#4B5563" />
-
-                                <HorizontalStackLayout Spacing="10" HorizontalOptions="End">
-                                    <Button Text="✏"
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EditarTareaCommand}"
-                                            CommandParameter="{Binding .}"
-                                            BackgroundColor="#60A5FA"
-                                            TextColor="White"
-                                            WidthRequest="40"
-                                            HeightRequest="40"
-                                            CornerRadius="20"
-                                            FontSize="18" />
-                                    <Button Text="🗑"
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TareaViewModel}}, Path=EliminarTareaCommand}"
-                                            CommandParameter="{Binding .}"
-                                            BackgroundColor="#EF4444"
-                                            TextColor="White"
-                                            WidthRequest="40"
-                                            HeightRequest="40"
-                                            CornerRadius="20"
-                                            FontSize="18" />
-                                </HorizontalStackLayout>
-                            </VerticalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-
-        </VerticalStackLayout>
-    </ScrollView>
+        </Grid>
+    </Grid>
 </ContentPage>

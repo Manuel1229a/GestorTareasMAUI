@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestorTareas.LoginPage"
+             BackgroundColor="#EAF6FF"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="CenterAndExpand">
+
+            <Frame BackgroundColor="White"
+                   Padding="25"
+                   CornerRadius="15"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="Gestor de Tareas" 
+                           FontSize="28" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"
+                           TextColor="#0079BF"/>
+
+                    <!-- Username wrapped in Frame para borde redondeado -->
+                    <Frame Padding="8" CornerRadius="8" BackgroundColor="#F4F4F4" HasShadow="False">
+                        <Entry x:Name="UsernameEntry"
+                               Placeholder="Usuario"
+                               Keyboard="Default"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               HeightRequest="45" />
+                    </Frame>
+
+                    <!-- Password wrapped en Frame -->
+                    <Frame Padding="8" CornerRadius="8" BackgroundColor="#F4F4F4" HasShadow="False">
+                        <Entry x:Name="PasswordEntry"
+                               Placeholder="Contraseña"
+                               IsPassword="True"
+                               TextColor="Black"
+                               BackgroundColor="Transparent"
+                               HeightRequest="45" />
+                    </Frame>
+
+                    <Button x:Name="LoginButton"
+                            Text="Iniciar Sesión"
+                            BackgroundColor="#0079BF"
+                            TextColor="White"
+                            CornerRadius="8"
+                            HeightRequest="45"
+                            Clicked="OnLoginClicked"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

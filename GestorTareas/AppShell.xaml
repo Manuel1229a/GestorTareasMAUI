@@ -8,6 +8,11 @@
     Title="GestorTareas">
 
     <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" />
+
+    <ShellContent
         Title="Gestión de Tareas"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
